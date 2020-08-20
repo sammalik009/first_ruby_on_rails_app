@@ -1,0 +1,20 @@
+<h1 class="text-center">Article Listing page</h1>
+<div class="container">
+    <% for article in @articles %>
+        <div class="row justify-content-md-center">
+            <div class="col-8" >
+                <div class="card text-center">
+                    <h5 class="card-header">by Usama Malik</h5>
+                    <div class="card-body">
+                        <h5 class="card-title"><%= article.title %></h5>
+                        <p class="card-text"><%= article.description %></p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <% end %>
+</div>
+<p>
+    <%= link_to 'Create New Article', new_article_path, class: "btn" %>
+</p>

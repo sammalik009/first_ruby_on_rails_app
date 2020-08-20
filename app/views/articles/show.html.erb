@@ -1,0 +1,8 @@
+<h1>Article Detail</h1>
+<h3>Article Name: <%= @article.title %></h3>
+<h4>Article Description: <%= @article.description %></h4>
+<h5>
+    <%= link_to 'Edit', edit_article_path(@article) %> |
+    <%= link_to 'Delete', article_path(@article), method: :delete, data: {confirm: "Are you sure?"} %> |
+    <%= link_to 'Back', articles_path %>
+</h5>
