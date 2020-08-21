@@ -1,8 +1,19 @@
-<h1>Article Detail</h1>
-<h3>Article Name: <%= @article.title %></h3>
-<h4>Article Description: <%= @article.description %></h4>
-<h5>
-    <%= link_to 'Edit', edit_article_path(@article) %> |
-    <%= link_to 'Delete', article_path(@article), method: :delete, data: {confirm: "Are you sure?"} %> |
-    <%= link_to 'Back', articles_path %>
-</h5>
+<h1 class="text-center">Article Detail</h1>
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col-8" >
+            <div class="card text-center mt-3">
+                <h5 class="card-header">by Usama Malik</h5>
+                <div class="card-body">
+                    <h5 class="card-title"><%= @article.title %></h5>
+                    <p class="card-text"><%= @article.description %></p>
+                    <%= link_to 'Edit', edit_article_path(@article), class: "btn btn-outline-info" %>
+                    <%= link_to 'Delete', article_path(@article), method: :delete, class: "btn btn-outline-danger", data: {confirm: "Are you sure?"} %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<p class="text-center mt-3">
+    <%= link_to 'Back to articles list', articles_path, class: "btn btn-outline-info" %>
+</p>
