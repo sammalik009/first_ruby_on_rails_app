@@ -7,7 +7,7 @@
         <div class="row justify-content-md-center">
             <div class="col-8" >
                 <div class="card text-center mt-3">
-                    <h5 class="card-header">by Usama Malik</h5>
+                    <h5 class="card-header">by <%= article.user.username %></h5>
                     <div class="card-body">
                         <h5 class="card-title"><%= article.title %></h5>
                         <p class="card-text"><%= truncate(article.description, length:50) %></p>
