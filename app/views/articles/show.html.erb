@@ -6,7 +6,7 @@
                 <h5 class="card-header">by Usama Malik</h5>
                 <div class="card-body">
                     <h5 class="card-title"><%= @article.title %></h5>
-                    <p class="card-text"><%= @article.description %></p>
+                    <div class="card-text text-left"><%= simple_format(@article.description) %></div>
                     <%= link_to 'Edit', edit_article_path(@article), class: "btn btn-outline-info" %>
                     <%= link_to 'Delete', article_path(@article), method: :delete, class: "btn btn-outline-danger", data: {confirm: "Are you sure?"} %>
                 </div>
